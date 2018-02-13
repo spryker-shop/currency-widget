@@ -1,8 +1,18 @@
-{% set currencies = currencies | default(_widget.currencies) %}
-{% set currentCurrency = currentCurrency | default(_widget.currentCurrency) %}
+{% extends template('widget') %}
 
-{% if currencies is not empty %}
-    <form method="GET" action="{{ path('currency-switch') }}" data-component="currency-switch">
+{% define data = {
+    currencies: _widget.currencies,
+    currentCurrency: _widget.currentCurrency
+} %}
+
+{% block template %}
+    {% if data.currencies is not empty %}
+        {{parent()}}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <form method="GET" action="{{ path('currency-switch') }}">
         {% embed atom('select') with {
             modifiers: ['naked'],
             attributes: {
@@ -10,8 +20,8 @@
                 onchange: 'this.form.submit()'
             },
             embed: {
-                currencies: currencies,
-                currentCurrency: currentCurrency
+                currencies: data.currencies,
+                currentCurrency: data.currentCurrency
             }
         } only %}
             {% block options %}
@@ -23,4 +33,4 @@
 
         <input type="hidden" name="referrer-url" value="{{ app.request.requestUri }}" />
     </form>
-{% endif %}
+{% endblock %}
