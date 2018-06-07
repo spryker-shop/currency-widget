@@ -5,14 +5,12 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerShop\Yves\CurrencyWidget\Plugin\ShopLayout;
+namespace SprykerShop\Yves\CurrencyWidget\Plugin\ShopUi;
 
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
-use SprykerShop\Yves\ShopLayout\Dependency\Plugin\CurrencyWidget\CurrencyWidgetPluginInterface;
+use SprykerShop\Yves\ShopUi\Dependency\Plugin\CurrencyWidget\CurrencyWidgetPluginInterface;
 
 /**
- * Class CurrencyWidgetPlugin
- *
  * @method \SprykerShop\Yves\CurrencyWidget\CurrencyWidgetFactory getFactory()
  */
 class CurrencyWidgetPlugin extends AbstractWidgetPlugin implements CurrencyWidgetPluginInterface
