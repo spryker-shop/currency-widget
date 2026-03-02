@@ -20,17 +20,11 @@ class CurrencyWidget extends AbstractWidget
             ->addParameter('currentCurrency', $this->getCurrentCurrency());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'CurrencyWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@CurrencyWidget/views/currency-switcher/currency-switcher.twig';
@@ -52,9 +46,6 @@ class CurrencyWidget extends AbstractWidget
         return $currencies;
     }
 
-    /**
-     * @return string
-     */
     protected function getCurrentCurrency(): string
     {
         return $this->getFactory()->getCurrencyClient()->getCurrent()->getCodeOrFail();

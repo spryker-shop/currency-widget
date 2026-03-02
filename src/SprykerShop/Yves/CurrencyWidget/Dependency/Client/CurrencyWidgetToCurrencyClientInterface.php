@@ -9,11 +9,6 @@ namespace SprykerShop\Yves\CurrencyWidget\Dependency\Client;
 
 interface CurrencyWidgetToCurrencyClientInterface
 {
-    /**
-     * @param string $currencyIsoCode
-     *
-     * @return void
-     */
     public function setCurrentCurrencyIsoCode(string $currencyIsoCode): void;
 
     /**

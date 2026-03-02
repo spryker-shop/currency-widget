@@ -22,11 +22,6 @@ class CurrencyWidgetToCurrencyClientBridge implements CurrencyWidgetToCurrencyCl
         $this->currencyClient = $currencyClient;
     }
 
-    /**
-     * @param string $currencyIsoCode
-     *
-     * @return void
-     */
     public function setCurrentCurrencyIsoCode(string $currencyIsoCode): void
     {
         $this->currencyClient->setCurrentCurrencyIsoCode($currencyIsoCode);

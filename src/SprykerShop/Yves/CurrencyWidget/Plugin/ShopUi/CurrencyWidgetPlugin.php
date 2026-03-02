@@ -16,9 +16,6 @@ use SprykerShop\Yves\ShopUi\Dependency\Plugin\CurrencyWidget\CurrencyWidgetPlugi
  */
 class CurrencyWidgetPlugin extends AbstractWidgetPlugin implements CurrencyWidgetPluginInterface
 {
-    /**
-     * @return void
-     */
     public function initialize(): void
     {
         $widget = new CurrencyWidget();
