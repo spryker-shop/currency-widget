@@ -16,6 +16,11 @@ use SprykerShop\Yves\ShopUi\Dependency\Plugin\CurrencyWidget\CurrencyWidgetPlugi
  */
 class CurrencyWidgetPlugin extends AbstractWidgetPlugin implements CurrencyWidgetPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function initialize(): void
     {
         $widget = new CurrencyWidget();
@@ -24,9 +29,9 @@ class CurrencyWidgetPlugin extends AbstractWidgetPlugin implements CurrencyWidge
     }
 
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * @return string
+     * @api
      */
     public static function getName(): string
     {
@@ -34,9 +39,9 @@ class CurrencyWidgetPlugin extends AbstractWidgetPlugin implements CurrencyWidge
     }
 
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * @return string
+     * @api
      */
     public static function getTemplate(): string
     {

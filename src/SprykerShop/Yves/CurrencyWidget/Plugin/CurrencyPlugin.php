@@ -25,6 +25,8 @@ class CurrencyPlugin extends AbstractPlugin implements CurrencyPluginInterface
     protected static $currencyTransfersByIsoCode = [];
 
     /**
+     * {@inheritDoc}
+     *
      * @param string $isoCode
      *
      * @return \Generated\Shared\Transfer\CurrencyTransfer
@@ -39,6 +41,8 @@ class CurrencyPlugin extends AbstractPlugin implements CurrencyPluginInterface
     }
 
     /**
+     * {@inheritDoc}
+     *
      * @return \Generated\Shared\Transfer\CurrencyTransfer
      */
     public function getCurrent()

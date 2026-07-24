@@ -25,14 +25,10 @@ class CurrencyWidgetRouteProviderPlugin extends AbstractRouteProviderPlugin
     public const ROUTE_NAME_CART = 'currency-switch';
 
     /**
-     * Specification:
+     * {@inheritDoc}
      * - Adds Routes to the RouteCollection.
      *
      * @api
-     *
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
      */
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
